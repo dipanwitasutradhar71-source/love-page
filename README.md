@@ -1,2 +1,147 @@
 # love-page
 A special love page with QR code.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>❤️ I Love You ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff7eb3,#a855f7);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.container{
+width:90%;
+max-width:420px;
+background:white;
+border-radius:25px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 30px rgba(255,255,255,.5);
+position:relative;
+z-index:2;
+animation:zoom 1s;
+}
+
+@keyframes zoom{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-bottom:15px;
+}
+
+h1{
+color:#ff2e7a;
+font-size:36px;
+margin-bottom:10px;
+}
+
+.message{
+font-size:20px;
+line-height:1.8;
+color:#444;
+}
+
+.love{
+margin-top:20px;
+font-size:28px;
+color:#ff2e7a;
+font-weight:bold;
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+color:#ff4d88;
+animation:float linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+100%{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="anime.jpg">
+
+<h1>❤️ I Love You ❤️</h1>
+
+<div class="message">
+
+No matter what happens,<br><br>
+
+<b>I will always be by your side.</b><br><br>
+
+You are my happiness,<br>
+my peace,<br>
+my forever.
+
+</div>
+
+<div class="love">
+
+Forever & Always ❤️
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*25+15)+"px";
+
+heart.style.animationDuration=(Math.random()*5+4)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
